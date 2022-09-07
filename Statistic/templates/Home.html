@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for item in statistics %}
+        {% if item.6 == True %}
+            {% if item.1 == 'Penalty train' %}
+                <h1>Тренировка: {{ item.1 }}</h1>
+                {% for item_player in players %}
+                    {% if item_player.id  == item.2 %}
+                        <h1>Игрок: {{ item_player }}</h1>
+                    {% endif %}
+                {% endfor %}
+                <h1>День: {{ item.3 }}</h1>
+                <h1>Вылажано: {{ item.4|date:"Y-M-d H:i" }}</h1>
+                {% if  item.4 != item.5 %}
+                    <h1>Отредактировано: {{ item.5|date:"Y-M-d H:i" }}</h1>
+                {% endif %}
+                <h1>{{ item.7 }}/10</h1>
+                <h1>{{ item.8 }}/10</h1>
+                <h1>{{ item.9 }}/10</h1>
+                <h1>{{ item.10 }}/10</h1>
+                <h1>{{ item.11 }}/10</h1>
+                <h1>{{ item.12 }}/10</h1>
+                <h1>--------------------</h1>
+            {% elif item.1 == 'Steffen carry train' %}
+                <h1>Тренировка: {{ item.1 }}</h1>
+                {% for item_player in players %}
+                    {% if item_player.id == item.2 %}
+                        <h1>Игрок: {{ item_player }}</h1>
+                    {% endif %}
+                {% endfor %}
+                <h1>День: {{ item.3 }}</h1>
+                <h1>Вылажано: {{ item.4|date:"Y-M-d H:i" }}</h1>
+                {% if  item.4 != item.5 %}
+                    <h1>Отредактировано: {{ item.5|date:"Y-M-d H:i" }}</h1>
+                {% endif %}
+                <h1>{{ item.7 }}/5</h1>
+                <h1>{{ item.8 }}/5</h1>
+                <h1>{{ item.9 }}/5</h1>
+                <h1>{{ item.10 }}/5</h1>
+                <h1>{{ item.11 }}/5</h1>
+                <h1>{{ item.12 }}/5</h1>
+                <h1>{{ item.13 }}/5</h1>
+                <h1>{{ item.14 }}/5</h1>
+                <h1>{{ item.15 }}/5</h1>
+                <h1>{{ item.16 }}/5</h1>
+                <h1>{{ item.17 }}/5</h1>
+                <h1>{{ item.18 }}/5</h1>
+                <h1>{{ item.19 }}/5</h1>
+                <h1>{{ item.20 }}/5</h1>
+                <h1>{{ item.21 }}/5</h1>
+                <h1>{{ item.22 }}/5</h1>
+                <h1>{{ item.23 }}/5</h1>
+                <h1>{{ item.24 }}/5</h1>
+                <h1>{{ item.25 }}/5</h1>
+                <h1>{{ item.26 }}/5</h1>
+                <h1>--------------------</h1>
+
+            {% elif item.1 == 'Steffen carry train pro' %}
+                <h1>Тренировка: {{ item.1 }}</h1>
+                {% for item_player in players %}
+                    {% if item_player.id == item.2 %}
+                        <h1>Игрок: {{ item_player }}</h1>
+                    {% endif %}
+                {% endfor %}
+                <h1>День: {{ item.3 }}</h1>
+                <h1>Вылажано: {{ item.4|date:"Y-M-d H:i" }}</h1>
+                {% if  item.4 != item.5 %}
+                    <h1>Отредактировано: {{ item.5|date:"Y-M-d H:i" }}</h1>
+                {% endif %}
+                <h1>{{ item.7 }}/10</h1>
+                <h1>{{ item.8 }}/10</h1>
+                <h1>{{ item.9 }}/10</h1>
+                <h1>{{ item.10 }}/10</h1>
+                <h1>{{ item.11 }}/10</h1>
+                <h1>{{ item.12 }}/10</h1>
+                <h1>{{ item.13 }}/10</h1>
+                <h1>{{ item.14 }}/10</h1>
+                <h1>{{ item.15 }}/10</h1>
+                <h1>{{ item.16 }}/10</h1>
+                <h1>{{ item.17 }}/10</h1>
+                <h1>{{ item.18 }}/10</h1>
+                <h1>{{ item.19 }}/10</h1>
+                <h1>{{ item.20 }}/10</h1>
+                <h1>{{ item.21 }}/10</h1>
+                <h1>{{ item.22 }}/10</h1>
+                <h1>{{ item.23 }}/10</h1>
+                <h1>{{ item.24 }}/10</h1>
+                <h1>{{ item.25 }}/10</h1>
+                <h1>{{ item.26 }}/10</h1>
+                <h1>--------------------</h1>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

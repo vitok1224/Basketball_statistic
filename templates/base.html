@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="{% url 'home_url' %}"><img src="media/photos/2022/09/02/g-700x390.jpg" alt="" width="50"></a>
+    {% if request.path !=  '/Регистрация'  %}
+        <a href="{% url 'sign_in_url' %}">ВОЙТИ</a>
+    {% endif %}
+{% block content %}EMPTY CONTENT{% endblock %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>РЕГИСТРАЦИЯ</h1>
+    <form action="{% url 'sign_up_url' %}" method="post" , enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-error">{{ form.non_field_errors }}</div>
+        {% for item in form %}
+            <p><label class='form-label' for="{{ item.id_for_label }}">{{ item.label }}</label>{{ item }}</p>
+            <div class="form-error">{{ item.errors }}</div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+    </form>
+    <h3>Уже есть аккаунт?<a href="{% url 'sign_in_url' %}">Войти в него</a></h3>
+{% endblock %}
